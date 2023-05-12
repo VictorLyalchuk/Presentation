@@ -10,12 +10,15 @@
   <ItemGroup>
     <None Remove="Image\0.png" />
     <None Remove="Image\1.png" />
+    <None Remove="Image\10.png" />
     <None Remove="Image\2.png" />
     <None Remove="Image\3.png" />
     <None Remove="Image\4.png" />
     <None Remove="Image\5.png" />
     <None Remove="Image\6.png" />
     <None Remove="Image\7.png" />
+    <None Remove="Image\8.png" />
+    <None Remove="Image\9.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -23,6 +26,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Image\1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\10.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Image\2.png">
@@ -44,6 +50,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Image\7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\9.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

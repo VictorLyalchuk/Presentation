@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.IO;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -30,7 +28,6 @@ namespace Presentation
             InitializeComponent();
             LoadImage();
             DataContext = model;
-            //Step.StepC = 0;
             model.img = items[Step.StepC = 0];
         }
         private void LoadImage()
@@ -43,6 +40,9 @@ namespace Presentation
             items.Add($@"image/5.png");
             items.Add($@"image/6.png");
             items.Add($@"image/7.png");
+            items.Add($@"image/8.png");
+            items.Add($@"image/9.png");
+            items.Add($@"image/10.png");
         }
 
         private void Previous_Button(object sender, RoutedEventArgs e)
@@ -56,7 +56,7 @@ namespace Presentation
                     PreviousBtn.IsEnabled = false;
                 else
                     PreviousBtn.IsEnabled = true;
-                if (Step.StepC == 7)
+                if (Step.StepC == 10)
                     NextBtn.IsEnabled = false;
                 else
                     NextBtn.IsEnabled = true;
@@ -72,14 +72,14 @@ namespace Presentation
         {
             try
             {
-                if (Step.StepC < 7)
+                if (Step.StepC < 10)
                     Step.StepC++;
                 model.img = items[Step.StepC];
                 if (Step.StepC == 0)
                     PreviousBtn.IsEnabled = false;
                 else
                     PreviousBtn.IsEnabled = true;
-                if (Step.StepC == 7)
+                if (Step.StepC == 10)
                     NextBtn.IsEnabled = false;
                 else
                     NextBtn.IsEnabled = true;
@@ -90,28 +90,5 @@ namespace Presentation
             }
         }
 
-    }
-    public class ViewModel : INotifyPropertyChanged
-    {
-        private string _img;
-        public string img
-        {
-            get { return _img; }
-            set
-            {
-                _img = value;
-                NotifyPropertyChanged();
-            }
-        }
-        public event PropertyChangedEventHandler PropertyChanged;
-        private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
-        {
-            if (PropertyChanged != null)
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-        }
-    }
-    static public class Step
-    {
-        static public int StepC { set; get; }
     }
 }
